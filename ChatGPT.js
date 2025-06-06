@@ -466,10 +466,11 @@
     <li id=nmenuid_it>${tl("拦截跟踪")}</li>
     <li id=nmenuid_ec>${tl("日新月异")}</li>
     <li id=nmenuid_dm>${tl("暗色主题")}</li>
-    
+    <li id=nmenuid_sd>${tl("显示调试")}</li>
     <li id=nmenuid_cu>${tl("检查更新")}</li>
-    
-    </ul>
+    <li id=nmenuid_ap>${tl("赞赏鼓励")}</li>    
+    <li id=nmenuid_ab>${tl("关于")}</li>
+</ul>
 `;
         $('#kcg').appendChild(ndivmenu);
 
