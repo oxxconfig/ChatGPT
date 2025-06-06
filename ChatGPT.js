@@ -466,9 +466,10 @@
     <li id=nmenuid_it>${tl("拦截跟踪")}</li>
     <li id=nmenuid_ec>${tl("日新月异")}</li>
     <li id=nmenuid_dm>${tl("暗色主题")}</li>
-    <li id=nmenuid_sd>${tl("显示调试")}</li>
+    
     <li id=nmenuid_cu>${tl("检查更新")}</li>
-</ul>
+    
+    </ul>
 `;
         $('#kcg').appendChild(ndivmenu);
 
@@ -646,7 +647,7 @@
             $('body').classList.add("kdark");
         }
 
-        if (gv("k_closeModer", false) === true) {
+        if (gv("k_closeModer", true) === true) {
             $('#nmenuid_cm .checkbutton').classList.add('checked');
         }
 
@@ -655,18 +656,18 @@
             $('body').classList.add("kkeenobservation");
         }
 
-        if (gv("k_clonechat", false) === true) {
+        if (gv("k_clonechat", true) === true) {
             $('#nmenuid_cc .checkbutton').classList.add('checked');
             cloneChat(true);
         }
 
-        if (gv("k_cleanlyhome", false) === true) {
+        if (gv("k_cleanlyhome", true) === true) {
             $('#nmenuid_pp .checkbutton').classList.add('checked');
             purifyPage();
             $('body').classList.add("kpurifypage");
         }
 
-        if (gv("k_largescreen", false) === true) {
+        if (gv("k_largescreen", true) === true) {
             $('#nmenuid_ls .checkbutton').classList.add('checked');
             $("main.w-full").classList.add('largescreen');
         }
@@ -675,12 +676,12 @@
             $('#nmenuid_sc .checkbutton').classList.add('checked');
         }
 
-        if (gv("k_intercepttracking", false) === true) {
+        if (gv("k_intercepttracking", true) === true) {
             $('#nmenuid_it .checkbutton').classList.add('checked');
             interceptTracking(true);
         }
 
-        if (gv("k_everchanging", false) === true) {
+        if (gv("k_everchanging", true) === true) {
             $('#nmenuid_ec .checkbutton').classList.add('checked');
             everChanging(true);
         }
@@ -1316,7 +1317,7 @@ nav.flex .transition-all {
     };
 
     const checkForUpdates = function(action = "click") {
-        const downloadURL = `https://raw.githubusercontent.com/xcanwin/KeepChatGPT/main/KeepChatGPT.user.js`;
+        const downloadURL = `https://raw.githubusercontent.com/oxxconfig/ChatGPT/refs/heads/main/ChatGPT.js`;
         const updateURL = downloadURL;
         GM_xmlhttpRequest({
             method: "GET",
