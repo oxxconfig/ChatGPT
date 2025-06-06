@@ -744,7 +744,7 @@
         ndivkcg.setAttribute("class", "flex py-3 px-3 items-center gap-3 rounded-md text-sm mb-1 flex-shrink-0 border border-white/20");
 
         const icon = GM_info.script.icon ? GM_info.script.icon : `${GM_info.script.namespace}raw/main/assets/logo.svg`;
-        ndivkcg._symbol1_innerHTML = `<img src='${icon}' style='width: 1rem;' /><div style='font-size: 0.8rem'>Keep${ndivkcg.id.slice(1,2).toUpperCase()}hatGPT by x${ndivkcg.id.slice(1,2)}anwin</div>`;
+        ndivkcg._symbol1_innerHTML = `<img src='${icon}' style='width: 1rem;' /><div style='font-size: 0.8rem'>ChatGPT 优化工具 </div>`;
         ndivkcg._symbol2_innerHTML = `<img src='${icon}' style='width: 1rem;' />`;
 
         if ($(symbol1_selector)) {
