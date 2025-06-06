@@ -60,8 +60,8 @@
 // @grant             unsafeWindow
 // @run-at            document-body
 // @noframes
-// @downloadURL https://raw.githubusercontent.com/xcanwin/KeepChatGPT/main/KeepChatGPT.user.js
-// @updateURL https://raw.githubusercontent.com/xcanwin/KeepChatGPT/main/KeepChatGPT.user.js
+// @downloadURL https://raw.githubusercontent.com/oxxconfig/ChatGPT/main/ChatGPT.js
+// @updateURL https://raw.githubusercontent.com/oxxconfig/ChatGPT/main/ChatGPT.js
 // ==/UserScript==
 
 
@@ -629,10 +629,11 @@
         $('#nmenuid_ap').onclick = function() {
             supportAuthor();
         };
-
+/*
         $('#nmenuid_ab').onclick = function() {
             window.open(GM_info.script.namespace, '_blank');
         };
+        */
     };
 
     const setUserOptions = function() {
@@ -1318,7 +1319,7 @@ nav.flex .transition-all {
     };
 
     const checkForUpdates = function(action = "click") {
-        const downloadURL = `https://raw.githubusercontent.com/oxxconfig/ChatGPT/refs/heads/main/ChatGPT.js`;
+        const downloadURL = `https://raw.githubusercontent.com/oxxconfig/ChatGPT/main/ChatGPT.js`;
         const updateURL = downloadURL;
         GM_xmlhttpRequest({
             method: "GET",
@@ -1438,14 +1439,14 @@ nav.flex .transition-all {
         }
     };
 
-    const supportAuthor = function() {
+ /*   const supportAuthor = function() {
         ndialog(`${tl("赞赏鼓励")}`, `· 本项目由兴趣驱使，提升自己的体验，并共享世界。
 <br>· 如果你喜欢作者的项目，可以给作者一个免费的Star或者Follow。
 <br>· 如果你希望作者的小猫吃到更好的罐头，欢迎赞赏与激励。`, `更多鼓励方式`, function(t) {
             window.open(`${GM_info.script.namespace}#赞赏`, '_blank');
         }, `img`, `https://github.com/xcanwin/KeepChatGPT/raw/main/assets/appreciate_wechat.png`);
     }
-
+*/
     const interceptTracking = function(action) {
         if (action === true) {
             window.addEventListener('beforescriptexecute', interceptTracking.listen_beforescriptexecute);
